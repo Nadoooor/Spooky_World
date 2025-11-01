@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spooky_World</title>
+             <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script> 
+ <script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.3/dist/aframe-physics-system.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+    
+</head>
+<body>
+    <a-scene stats physics="driver: ammo; debug: true; paused: true;">
+        <a-entity camera wasd-controls="fly: false" rotation="0 180 0" position="0 2 0" look-controls=""></a-entity>
+        <a-assets>
+             <a-asset-item src="floor_material.glb" id="floor"></a-asset-item>
+            <a-asset-item src="damaged_wall.glb" id="wall"></a-asset-item>
+            <a-asset-item src="monster.glb" id="mon"></a-asset-item>
+            <a-asset-item src="cable_grace_-_halloween_2014.glb" id="grace"></a-asset-item>
+            <a-asset-item src="creepy_teen_girl.glb" id="girl"></a-asset-item>
+            <a-asset-item src="curious_skeleton.glb" id="skele"></a-asset-item>
+            <a-asset-item src="halloween_pumpkin.glb" id="pum"></a-asset-item>
+            <a-asset-item src="halloween-character.glb" id="pl"></a-asset-item>
+            <a-asset-item src="mommy_long_legs_arachnophobia.glb" id="hug"></a-asset-item>
+            <a-asset-item src="spooky_house_halloween.glb" id="spo"></a-asset-item>
+           
+        </a-assets>
+<a-light position="0 1.56044 0.93299" light="decay: 0.55; intensity: 3.1; type: point"></a-light>
+        <a-entity environment="preset: starry; fog:0.99; groundColor: #8f65f1; skyColor: #BCE3D9"></a-entity></a-entity>
+        
+        
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="0 0.1 0"></a-entity>        
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="4 0.1 0"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="8 0.1 0"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="12 0.1 0"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="0 0.1 4"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="0 0.1 8"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="0 0.1 12"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="4 0.1 4"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="4 0.1 8"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="4 0.1 12"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="8 0.1 4"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="8 0.1 8"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="8 0.1 12"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="12 0.1 4"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="12 0.1 8"></a-entity>
+        <a-entity gltf-model="#floor" ammo-body="type: static" ammo-shape="type: box" position="12 0.1 12"></a-entity>
+        
+        <a-entity gltf-model="#wall" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 2 0" color="red" position="3 0 -2" scale="0.05 0.05 0.05"></a-entity>
+        <a-entity gltf-model="#wall" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 2 0"position="9 0 -2" scale="0.05 0.05 0.05"></a-entity>
+        <a-entity gltf-model="#wall" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 2 0" position="3 0 14" scale="0.05 0.05 0.05"></a-entity>
+        <a-entity gltf-model="#wall" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 2 0" position="9 0 14" scale="0.05 0.05 0.05"></a-entity>
+        <a-entity gltf-model="#wall" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 2 0" position="-2 0 3" rotation="0 90 0" scale="0.05 0.05 0.05"></a-entity>
+        <a-entity gltf-model="#wall" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 2 0" position="-2 0 9" rotation="0 90 0" scale="0.05 0.05 0.05"></a-entity>
+        <a-entity gltf-model="#wall" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 2 0" position="14 0 9" rotation="0 90 0" scale="0.05 0.05 0.05"></a-entity>
+        
+        <a-entity gltf-model="#mon"  animation-mixer position="1 0 0" scale="1 1 1"></a-entity>
+        <a-entity gltf-model="#grace" animation-mixer position="2 0 0"></a-entity>
+        <a-entity gltf-model="#girl" animation-mixer position="3 0 0"></a-entity>
+        <a-entity gltf-model="#skele"animation-mixer position="4 0 0"></a-entity>
+        <a-entity gltf-model="#pum" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 0.01 0.02;" position="0 1 0" scale="0.007 0.007 0.007"></a-entity>
+        <a-entity gltf-model="#pum"  ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 0.01 0.02;"  position="0 1 12" scale="0.007 0.007 0.007"></a-entity>
+        <a-entity gltf-model="#pum" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 0.01 0.02;"  position="0 1 7" scale="0.007 0.007 0.007"></a-entity>
+        <a-entity gltf-model="#pum" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 0.01 0.02;"  position="0 1 9" scale="0.007 0.007 0.007"></a-entity>
+        <a-entity gltf-model="#pum" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 0.01 0.02;"  position="0 1 5" scale="0.007 0.007 0.007"></a-entity>
+        <a-entity gltf-model="#pl" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hacd; offset: 0 3.7 0"  animation-mixer scale="2 2 2" position="6 4 0"></a-entity>
+        <a-entity gltf-model="#hug" animation-mixer position="7 0 0"></a-entity>
+        <a-entity gltf-model="#spo" ammo-body="type: dynamic; gravity: 0 0 0;" ammo-shape="type: hull;" animation-mixer scale="5 5 5" rotation="0 -90 0" position="14 0 3"></a-entity>
+        
+        
+        
+    </a-scene> 
+</body> 
+</html>
