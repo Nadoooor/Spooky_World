@@ -15,7 +15,7 @@ AFRAME.registerComponent('music', {
       });
     },
 });
-
+console.log("control panal loaded");
 AFRAME.registerComponent('lightup', {
     init: function () {
         console.log("light up loaded");
@@ -23,11 +23,31 @@ AFRAME.registerComponent('lightup', {
         counter = 0;
         this.el.addEventListener('click', (e) => {
             console.log("light up clicked" + counter);
+            counter = this.light.getAttribute('light').intensity;
             counter += 1;
-            if (counter > 5){
-                counter = 5;
+            if (counter > 10){
+                counter = 10;
             }
-            this.light.setAttribute('light', 'intenstiyy', counter);
+            this.light.setAttribute('light', 'intensity', counter);
+            
+        });
+    }
+});
+
+AFRAME.registerComponent('lightdown', {
+    init: function () {
+        console.log("light up loaded");
+        this.light = document.querySelector('#light');
+
+        counter = 0;
+        this.el.addEventListener('click', (e) => {
+            counter = this.light.getAttribute('light').intensity;
+            console.log("light up clicked" + counter);
+            counter -= 1;
+            if (counter < 0){
+                counter =0;
+            }
+            this.light.setAttribute('light', 'intensity', counter);
             
         });
     }

@@ -53,3 +53,21 @@ console.log("draging:", this.draging);
     // this.el.object3D.quaternion.copy(cameraAng);
   }
 });
+
+
+// AFRAME.registerComponent('clickable', {
+//   init: function (){
+//     this.curs = document.querySelector('#curs');
+//     console.log("clickable loaded");
+//     this.el.addEventListener('click', (e) => {
+//       console.log("clickable hover");
+//       this.curs.setAttribute('geometry', 'radius', 0.007);
+//       this.curs.setAttribute('material', 'color', 'blue');
+//     });
+//     this.el.addEventListener('mouseup', (e) => {
+//       console.log("clickable unhover");
+//       this.curs.setAttribute('geometry', 'radius', 0.005);
+//       this.curs.setAttribute('material', 'color', 'red');
+//     });
+//   }
+// });
