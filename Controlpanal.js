@@ -52,3 +52,21 @@ AFRAME.registerComponent('lightdown', {
         });
     }
 });
+
+AFRAME.registerComponent('morepums', {
+    init: function () {
+        this.el.addEventListener('click', (e) => {
+            newpum = document.createElement('a-entity');
+            newpum.setAttribute('gltf-model', '#pum');
+            newpum.setAttribute('grap', '');
+            newpum.setAttribute('class', 'draggable');
+            newpum.setAttribute('ammo-body', 'type: dynamic; gravity: 0 -9.8 0;');
+            newpum.setAttribute('ammo-shape', 'type: hull; offset: 0 0.01 0.02;');
+            newpum.setAttribute('position', '5 2 5');
+            newpum.setAttribute('scale', '0.007 0.007 0.007');
+            scene = document.querySelector('a-scene');
+            scene.appendChild(newpum);
+
+        });
+
+   } });

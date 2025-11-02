@@ -41,7 +41,7 @@ console.log("draging:", this.draging);
     
     const cameraDir = new THREE.Vector3();
     came.object3D.getWorldDirection(cameraDir);
-    camerapos.add(cameraDir.multiplyScalar(-4));
+    camerapos.add(cameraDir.multiplyScalar(-2));
     const transform = new Ammo.btTransform();
     transform.setIdentity();
     transform.setOrigin(new Ammo.btVector3(camerapos.x, camerapos.y, camerapos.z));
